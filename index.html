@@ -47,95 +47,13 @@
         <div class="row align-items-center">
           <div class="col-md-12">
             <h1><a class="text-light"
-                href="https://www.researchgate.net/publication/331115227_CROSS-LINGUAL_VOICE_CONVERSION_WITH_BILINGUAL_PHONETIC_POSTERIORGRAM_AND_AVERAGE_MODELING">Cross-lingual
-                Voice Conversion <br> with Bilingual Phonetic Posteriorgram and Average Modeling</a></h1>
-            <p>
-              <div class="row">
-                <div class="col-md col-sm-12"><a class="text-light"
-                    href="https://www.researchgate.net/profile/Yi_Zhou184">Yi Zhou</a> </div>
-                <div class="col-md col-sm-12"><a class="text-light"
-                    href="https://scholar.google.com.sg/citations?user=6gc45QcAAAAJ&hl=en&oi=ao">Xiaohai Tian</a> </div>
-                <div class="col-md col-sm-12"><a class="text-light"
-                    href="https://dblp.uni-trier.de/pers/hd/x/Xu:Haihua">Haihua Xu</a> </div>
-                <div class="col-md col-sm-12"><a class="text-light"
-                    href="https://scholar.google.com/citations?user=V8XFDQcAAAAJ&hl=en">Rohan Kumar Das</a> </div>
-                <div class="col-md col-sm-12"><a class="text-light"
-                    href="https://scholar.google.com/citations?user=z8_x7C8AAAAJ&hl=en">Haizhou Li</a> </div>
-              </div>
-            </p>
-            <p><a class="text-light">Department of Electrical and Computer Engineering, National University of
-                Singapore, Singapore<br>
-                Temasek Laboratories, Nanyang Technological University, Singapore</p></a>
+               Language Dependent Network for Cross-lingual Voice Conversion</a></h1>
           </div>
         </div>
       </div>
     </div>
   </header>
   <main>
-    <div class="container">
-      <div class="row" id="intro">
-        <div class="col">
-          <h2>Cross-lingual Voice Conversion</h2>
-          <div>
-            <p>Voice conversion (VC) modifies the speech of one speaker (source) to make it sound as if it is spoken by
-              another speaker (target). Cross-lingual VC is a special case where source and target speakers speak
-              different languages. </p>
-          </div>
-        </div>
-      </div>
-      <hr>
-      <div class="row" id="monolingual">
-        <div class="col">
-          <h2>Monolingual PPG VC (Baseline)</h2>
-          <div>
-            <p>Phonetic PosteriorGram (PPG) is a time-versus-class vector that represents the posterior probabilities of
-              phonetic
-              classes for a specific time frame. Due to PPG's speaker-independent and languageindependent properties,
-              they have
-              been successfully applied for cross-lingual voice conversion<a class="text-success" href="#1">[1]</a>.
-              The training and conversion stages are shown as below: </p>
-            <img id="img1" src="./img/baseline.svg" class="img-fluid" style="width:100%"
-              alt="Monolingual PPG system framework">
-            <figcaption class="figure-caption text-center">
-              Figure1. Block diagram of (a) training and (b) conversion workflows of the cross-lingual VC system with
-              monolingual PPGs.
-          </div>
-        </div>
-      </div>
-      <hr>
-      <div class="row" id="bilingual">
-        <div class="col">
-          <h2>Bilingual PPG VC (Baseline)</h2>
-          <div>
-            <p>To capture accurate phonetic information of both source and target languages, bilingual PPGs are
-              introduced to represent
-              the speaker-independent features of speech signals from different languages in the same feature space. In
-              particular, a
-              bilingual PPG is formed by stacking two monolingual PPG vectors, which are extracted from two monolingual
-              speech recognition systems.
-            </p>
-            <img id="img2" src="./img/bilingual.svg" class="img-fluid" style="width:100%"
-              alt="Bilingual PPG system framework with average modeling">
-            <figcaption class="figure-caption text-center">
-              Figure2. Block diagram of (a) training and (b) conversion workflows of the cross-lingual VC system with
-              bilingual PPGs.
-          </div>
-        </div>
-      </div>
-      <hr>
-      <div class="row" id="average">
-        <div class="col">
-          <h2>Average Modeling Approach with Bilingual PPG (Proposed)</h2>
-          <div>
-            <p>To further enhance the quality of converted speech, we proposed an average modeling approach<a
-                class="text-success" href="#2">[2]</a>, which
-              utilizes acoustic and linguistic information from many speakers in both source and target languages for
-              average model training. Additional
-              i-vectors are concatenated with bilingual PPGs to represent speaker indentities.</p>
-          </div>
-        </div>
-      </div>
-      <hr>
       <div class="row" id="result">
         <div class="col-md-12">
           <h2>Speech Samples</h2>
@@ -925,34 +843,6 @@
         </div>
       </div>
       <hr>
-      <div class="row" id="ref">
-        <div class="col">
-          <h2>References</h2>
-          <div>
-            <p>
-              <a name="1">[1]</a>
-              Lifa Sun, Hao Wang, Shiyin Kang, Kun Li and Helen Meng, <a class="text-success"
-                href="http://www1.se.cuhk.edu.hk/~hccl/publications/pub/2016_IS16_SunLifa.PDF">“Personalized,
-                Cross-lingual TTS Using Phonetic Posteriorgrams</a>,” in <em>INTERSPEECH, 2016, pp. 322-326.</em>
-            </p>
-            <p>
-              <a name="2">[2]</a>
-              Xiaohai Tian, Junchao Wang, Haihua Xu, Eng-Siong Chng, and Haizhou Li, <a class="text-success"
-                href="https://www.isca-speech.org/archive/Odyssey_2018/pdfs/11.pdf">“Average modeling approach to voice
-                conversion with non-parallel data</a>,” in <em>Proceedings of Odyssey The Speaker and Language
-                Recognition Workshop, 2018, pp. 227–232.</em>
-            </p>
-            <p>
-              <a name="3">[3]</a>
-              Jaime Lorenzo-Trueba, Junichi Yamagishi, Tomoki Toda, Daisuke Saito, Fernando Villavicencio, Tomi
-              Kinnunen, and Zhenhua Ling, <a class="text-success" href="https://arxiv.org/abs/1804.04262">“The voice
-                conversion challenge 2018: Promoting development of parallel and nonparallel method</a>,” in <em>Speaker
-                Odyssey, 2018.</em>
-            </p>
-          </div>
-        </div>
-      </div>
-      <hr>
       <!-- <div class="row" id="contact">
           <div class="col">
             <h2>Contact</h2>
@@ -961,20 +851,6 @@
         </div> -->
     </div>
   </main>
-  <footer class="bg-secondary text-light mt-4 pt-3 pb-2 ">
-    <div class="container">
-      <p class="text-center">
-        <small>
-          Cross-lingual Voice Conversion
-          <br>
-          Cross-lingual Voice Conversion with Bilingual Phonetic Posteriorgram and Average Modeling
-          <br>
-          <a href="https://www.researchgate.net/profile/Yi_Zhou184" class="text-light"><strong>Yi Zhou</strong></a> |
-          E0154158@u.nus.edu
-        </small>
-      </p>
-    </div>
-  </footer>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
