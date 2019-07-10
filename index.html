@@ -47,7 +47,7 @@
         <div class="row align-items-center">
           <div class="col-md-12">
             <h1><a class="text-light">
-                Language Dependent Network for <br> Cross-lingual Voice Conversion </a></h1>
+              A MODULARIZED NEURAL NETWORK WITH LANGUAGE-SPECIFIC OUTPUT LAYERS <br> FOR CROSS-LINGUAL VOICE CONVERSION </a></h1>
             <p>
               <div class="row">
               </div>
@@ -63,35 +63,38 @@
       <div class="row" id="result">
         <div class="col-md-12">
           <h2>Speech Samples</h2>
-          <p>The model is evaluated with speech from two database:</p>
+          <p>The model is evaluated with bilingual speakers from the EMIME Mandarin Bilingual Database [<a class="text-success" href="#1">1</a>]:</p>
               <p>English: VCC2018[<a class="text-success" href="#1">1</a>]
                 <p>
-                  <p>Mandarin: The Speech synthesis-library of average model provided by Databaker(<a
-                      class="text-success"
-                      href="http://www.data-baker.com/hc_pm_en.html">http://www.data-baker.com/hc_pm_en.html</a>).</p>
                   There are 4 systems implemented for comparison:
-                  IC:
-                  DC:
-                  IB:
-                  DB:
-                  <h3><small>Enable a Monolingual English Speaker to Speak Mandarin</small></h3>
-               
-                  <h4><small>Female &rarr; Female</small></h4>
+                  bPPG-LI (baseline): The cross-lingual voice conversion system using bilingual PPG (bPPG) with a single language-independent (LI) output layer.
+                  mPPG-LI: The cross-lingual voice conversion system using mixed-lingual PPG (mPPG) with a single language-independent (LI) output layer.
+                  bPPG-LS: The cross-lingual voice conversion system using bilingual PPG (bPPG) with language-specific (LS) output layers.
+                  mPPG-LS: The cross-lingual voice conversion system using mixed-lingual PPG (mPPG) with language-specific (LS) output layers.
+                </p>
+          
+          <p>
+            en &rarr; cn denotes we are converting an English source utterance to a Mandarin target speaker's voice.<br>
+            cn &rarr; en denotes we are converting a Mandarin source utterance to an English target speaker's voice.
+            </p>
+          
+<!--           <h3><small>Enable a Monolingual Mandarin Speaker to Speak English</small></h3>
+          
+                  <h4><small>en &rarr; cn</small></h4> -->
                   <div class="big-screen">
                     <table class="table">
                       <thead>
                         <tr>
                           <th></th>
-                          <th>Source</th>
-                          <th>Target</th>
-                          <th>Monolingual Baseline</th>
-                          <th>Bilingual Baseline</th>
-                          <th>Proposed</th>
+                          <th>en &rarr; cn</th>
+                          <th>en &rarr; cn </th>
+                          <th>cn &rarr; en</th>
+                          <th>cn &rarr; en</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <th scope="row">Sample 1</th>
+                          <th scope="row">bPPG-LI</th>
                           <td>
                             <audio controls>
                               <source src="./audio/en2cn/src/f1.wav" type="audio/wav" />
@@ -104,6 +107,7 @@
                               Your browser does not support the audio element.
                             </audio>
                           </td>
+                          <th scope="row">mPPG-LI</th>
                           <td>
                             <audio controls>
                               <source src="./audio/en2cn/monolingual/f1.wav" type="audio/wav" />
@@ -116,6 +120,26 @@
                               Your browser does not support the audio element.
                             </audio>
                           </td>
+                           <th scope="row">bPPG-LS</th>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/en2cn/average/f1.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/en2cn/average/f1.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <th scope="row">mPPG-LS</th>
+                          <td>
+                            <audio controls>
+                              <source src="./audio/en2cn/average/f1.wav" type="audio/wav" />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
                           <td>
                             <audio controls>
                               <source src="./audio/en2cn/average/f1.wav" type="audio/wav" />
@@ -123,735 +147,11 @@
                             </audio>
                           </td>
                         </tr>
-                        <tr>
-                          <th scope="row">Sample 2</th>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/src/f2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/tgt/f2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/monolingual/f2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/bilingual/f2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/average/f2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
+                       
                       </tbody>
                     </table>
                   </div>
-                  <div class="small-screen">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>Sample 1</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Source</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/src/f1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Target</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/tgt/f1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Monolingual Baseline</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/monolingual/f1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Bilingual Baseline</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/bilingual/f1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Proposed</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/average/f1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th scope="row">Sample 2</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Source</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/src/f2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Target</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/tgt/f2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Monolingual Baseline</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/monolingual/f2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Bilingual Baseline</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/bilingual/f2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <td>Proposed</td>
-                        <td>
-                          <audio controls>
-                            <source src="./audio/en2cn/average/f2.wav" type="audio/wav" />
-                            Your browser does not support the audio element.
-                          </audio>
-                        </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <h4><small>Male &rarr; Male</small></h4>
-                  <div class="big-screen">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th scope="col"></th>
-                          <th scope="col">Source</th>
-                          <th scope="col">Target</th>
-                          <th scope="col">Monolingual Baseline</th>
-                          <th scope="col">Bilingual Baseline</th>
-                          <th scope="col">Proposed</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">Sample 1</th>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/src/m1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/tgt/m1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/monolingual/m1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/bilingual/m1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/average/m1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Sample 2</th>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/src/m2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/tgt/m2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/monolingual/m2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/bilingual/m2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/average/m2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                      </tbody>
-                    </table>
-                  </div>
-                  <div class="small-screen">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>Sample 1</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Source</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/src/m1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Target</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/tgt/m1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Monolingual Baseline</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/monolingual/m1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Bilingual Baseline</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/bilingual/m1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Proposed</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/average/m1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th scope="row">Sample 2</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Source</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/src/m2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Target</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/tgt/m2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Monolingual Baseline</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/monolingual/m2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Bilingual Baseline</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/en2cn/bilingual/m2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <td>Proposed</td>
-                        <td>
-                          <audio controls>
-                            <source src="./audio/en2cn/average/m2.wav" type="audio/wav" />
-                            Your browser does not support the audio element.
-                          </audio>
-                        </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <h3><small>Enable a Monolingual Mandarin Speaker to Speak English</small></h3>
-                  <h4><small>Female &rarr; Female</small></h4>
-                  <div class="big-screen">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th scope="col"></th>
-                          <th scope="col">Source</th>
-                          <th scope="col">Target</th>
-                          <th scope="col">Monolingual Baseline</th>
-                          <th scope="col">Bilingual Baseline</th>
-                          <th scope="col">Proposed</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">Sample 1</th>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/src/f1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/tgt/f1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/monolingual/f1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/bilingual/f1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/average/f1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Sample 2</th>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/src/f2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/tgt/f2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/monolingual/f2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/bilingual/f2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/average/f2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <div class="small-screen">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>Sample 1</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Source</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/src/f1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Target</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/tgt/f1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Monolingual Baseline</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/monolingual/f1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Bilingual Baseline</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/bilingual/f1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Proposed</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/average/f1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th scope="row">Sample 2</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Source</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/src/f2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Target</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/tgt/f2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Monolingual Baseline</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/monolingual/f2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Bilingual Baseline</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/bilingual/f2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <td>Proposed</td>
-                        <td>
-                          <audio controls>
-                            <source src="./audio/cn2en/average/f2.wav" type="audio/wav" />
-                            Your browser does not support the audio element.
-                          </audio>
-                        </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <h4><small>Male &rarr; Male</small></h4>
-                  <div class="big-screen">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th scope="col"></th>
-                          <th scope="col">Source</th>
-                          <th scope="col">Target</th>
-                          <th scope="col">Monolingual Baseline</th>
-                          <th scope="col">Bilingual Baseline</th>
-                          <th scope="col">Proposed</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">Sample 1</th>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/src/m1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/tgt/m1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/monolingual/m1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/bilingual/m1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/average/m1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Sample 2</th>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/src/m2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/tgt/m2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/monolingual/m2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/bilingual/m2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/average/m2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <div class="small-screen">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>Sample 1</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Source</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/src/m1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Target</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/tgt/m1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Monolingual Baseline</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/monolingual/m1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Bilingual Baseline</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/bilingual/m1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Proposed</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/average/m1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th scope="row">Sample 2</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Source</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/src/m2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Target</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/tgt/m2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Monolingual Baseline</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/monolingual/m2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Bilingual Baseline</td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/cn2en/bilingual/m2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                        </tr>
-                        <td>Proposed</td>
-                        <td>
-                          <audio controls>
-                            <source src="./audio/cn2en/average/m2.wav" type="audio/wav" />
-                            Your browser does not support the audio element.
-                          </audio>
-                        </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                 
         </div>
       </div>
       <hr>
@@ -861,10 +161,8 @@
           <div>
             <p>
               <a name="1">[1]</a>
-              Jaime Lorenzo-Trueba, Junichi Yamagishi, Tomoki Toda, Daisuke Saito, Fernando Villavicencio, Tomi
-              Kinnunen, and Zhenhua Ling, <a class="text-success" href="https://arxiv.org/abs/1804.04262">“The voice
-                conversion challenge 2018: Promoting development of parallel and nonparallel method</a>,” in <em>Speaker
-                Odyssey, 2018.</em>
+               Mirjam Wester and Hui Liang, “The emime mandarin bilingual database,” Tech. Rep. EDI-INF-RR-1396, The 
+               University of Edinburgh, 2011.
             </p>
           </div>
         </div>
