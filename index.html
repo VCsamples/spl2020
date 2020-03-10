@@ -52,17 +52,17 @@
                           <p>
               <div class="row">
                 <div class="col-md col-sm-12"><a class="text-light"
-                    href="https://www.researchgate.net/profile/Yi_Zhou184">Yi Zhou</a> </div>
+                    href="https://www.researchgate.net/profile/Yi_Zhou184">Yi Zhou</a>Student Member, IEEE </div>
                 <div class="col-md col-sm-12"><a class="text-light"
-                    href="https://scholar.google.com.sg/citations?user=6gc45QcAAAAJ&hl=en&oi=ao">Xiaohai Tian</a> </div>
+                    href="https://scholar.google.com.sg/citations?user=6gc45QcAAAAJ&hl=en&oi=ao">Xiaohai Tian</a> Member, IEEE </div>
                 <div class="col-md col-sm-12"><a class="text-light"
-                    href="https://scholar.google.com/citations?user=z8_x7C8AAAAJ&hl=en">Haizhou Li</a> </div>
+                    href="https://scholar.google.com/citations?user=z8_x7C8AAAAJ&hl=en">Haizhou Li</a> Fellow, IEEE </div>
               </div>
             </p>
               <div class="row">
               </div>
             </p>
-            
+
           </div>
         </div>
       </div>
@@ -74,30 +74,32 @@
         <div class="col-md-12">
           <h2>Speech Samples</h2>
           <hr>
-          <p>The model is evaluated with bilingual speakers from:<br> 
+          <p>The model is evaluated with bilingual speakers from:<br>
             the EMIME Mandarin Bilingual Database [<a class="text-success" href="#1">1</a>]:</p>
           <hr>
                 <p>
                   There are 5 systems implemented for comparison:<br>
-                  (1) <b>MT-WORLD</b> (baseline):<br> This is a generator-vocoder pipeline system. The generator with multi-task learning is followed by a WORLD parametric vocoder.<br>
-                  (2) <b>MT-WaveRNN</b>:<br> This is a generator-vocoder pipeline system. The generator with multi-task learning is followed by a WaveRNN neural vocoder.<br>
-                  (3) <b>STWaveRNN</b>:<br> This is an integrated architecture that takes linguistic features as input and generates speech waveform as output. As the whole network is shared for both languages, it is called Single-Task WaveRNN or STWaveRNN.<br>
-                  (4) <b>MTWaveRNN</b>:<br> This is an integrated architecture, that takes linguistic features as input andgenerates speech waveform as output directly. Each language-dependent head in the output section has two dense layers.<br>
-                  (5) <b>MTWaveRNN+</b>:<br> This is an integrated architecture, that takes linguistic features as input andgenerates speech waveform as output directly. Each language-dependent head in the output section has three dense layers in each language-dependent. We use a ‘+’ sign to indicate there is an extra dense layer.                </p>
+                  Reference Systems:
+                  (a) <b> MT-WORLD</b>:<br> This is a generator-vocoder pipeline system. The generator with multi-task learning is followed by a WORLD parametric vocoder.<br>
+                  (b) <b> MT-WaveRNN</b>:<br> This is a generator-vocoder pipeline system. The generator with multi-task learning is followed by a WaveRNN neural vocoder.<br>
+                  (c) <b> STWaveRNN</b>:<br> This is an integrated architecture that takes linguistic features as input and generates speech waveform as output. As the whole network is shared for both languages, it is called Single-Task WaveRNN or STWaveRNN.<br>
+                  Proposed Systems:
+                  (d) <b> MTWaveRNN</b>:<br> This is an integrated architecture, that takes linguistic features as input andgenerates speech waveform as output directly. Each language-dependent head in the output section has two dense layers.<br>
+                  (e) <b> MTWaveRNN+</b>:<br> This is an integrated architecture, that takes linguistic features as input andgenerates speech waveform as output directly. Each language-dependent head in the output section has three dense layers in each language-dependent. We use a ‘+’ sign to indicate there is an extra dense layer.                </p>
           <hr>
           <p>
             <b>en &rarr; cn</b>:<br>
             we are converting an English source utterance to a Mandarin target speaker's voice.<br>
-            <b>cn &rarr; en</b>:<br> 
+            <b>cn &rarr; en</b>:<br>
             we are converting a Mandarin source utterance to an English target speaker's voice.<br>
-           
+
             <hr>
             <b>F</b> : Female Speaker <br>
-            <b>M</b> : Male Speaker 
+            <b>M</b> : Male Speaker
             </p>
-          
+
 <!--           <h3><small>Enable a Monolingual Mandarin Speaker to Speak English</small></h3>
-          
+
                   <h4><small>en &rarr; cn</small></h4> -->
                   <div class="big-screen">
                     <table class="table">
@@ -137,7 +139,7 @@
                               Your browser does not support the audio element.
                             </audio>
                           </td>
-                          
+
                           </tr>
                         <tr>
                           <th scope="row">Target    </th>
@@ -165,10 +167,10 @@
                               Your browser does not support the audio element.
                             </audio>
                           </td>
-                           
+
                           </tr>
                         <tr>
-                          <th scope="row">(a)MT-WORLD</th>
+                          <th scope="row">(a) MT-WORLD</th>
                           <td>
                             <audio controls>
                               <source src="./audio/a/1.wav" type="audio/wav" />
@@ -193,10 +195,10 @@
                               Your browser does not support the audio element.
                             </audio>
                           </td>
-                           
+
                           </tr>
                         <tr>
-                          <th scope="colmun">(b)MT-WaveRNN</th>
+                          <th scope="colmun">(b) MT-WaveRNN</th>
                           <td>
                             <audio controls>
                               <source src="./audio/b/1.wav" type="audio/wav" />
@@ -221,10 +223,10 @@
                               Your browser does not support the audio element.
                             </audio>
                           </td>
-                          
+
                           </tr>
                         <tr>
-                           <th scope="column">(c)STWaveRNN</th>
+                           <th scope="column">(c) STWaveRNN</th>
                           <td>
                             <audio controls>
                               <source src="./audio/c/1.wav" type="audio/wav" />
@@ -249,10 +251,10 @@
                               Your browser does not support the audio element.
                             </audio>
                           </td>
-                       
+
                           </tr>
                         <tr>
-                          <th scope="column" nowrap>(d)MTWaveRNN</th>
+                          <th scope="column" nowrap>(d) MTWaveRNN</th>
                           <td>
                             <audio controls>
                               <source src="./audio/d/1.wav" type="audio/wav" />
@@ -277,10 +279,10 @@
                               Your browser does not support the audio element.
                             </audio>
                           </td>
-                          
+
                         </tr>
                         <tr>
-                          <th scope="column" nowrap>(e)MTWaveRNN+</th>
+                          <th scope="column" nowrap>(e) MTWaveRNN+</th>
                           <td>
                             <audio controls>
                               <source src="./audio/e/1.wav" type="audio/wav" />
@@ -305,13 +307,13 @@
                               Your browser does not support the audio element.
                             </audio>
                           </td>
-                          
+
                         </tr>
-                  
+
                       </tbody>
                     </table>
                   </div>
-                 
+
         </div>
       </div>
       <hr>
@@ -321,7 +323,7 @@
           <div>
             <p>
               <a name="1">[1]</a>
-               Mirjam Wester and Hui Liang, “The emime mandarin bilingual database,” Tech. Rep. EDI-INF-RR-1396, The 
+               Mirjam Wester and Hui Liang, “The emime mandarin bilingual database,” Tech. Rep. EDI-INF-RR-1396, The
                University of Edinburgh, 2011.
             </p>
           </div>
@@ -339,7 +341,7 @@
   <footer class="bg-secondary text-light mt-4 pt-3 pb-2 ">
     <div class="container">
       <p class="text-center">
-        
+
       </p>
     </div>
   </footer>
