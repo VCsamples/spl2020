@@ -79,15 +79,19 @@
           <hr>
                 <p>
                   There are 5 systems implemented for comparison:<br>
-                  Reference Systems:
+                  <hr>
+                  <b>Reference Systems</b>:<br>
+                  <hr>
                   (a) <b> MT-WORLD</b>:<br> This is a generator-vocoder pipeline system. The generator with multi-task learning is followed by a WORLD parametric vocoder.<br>
                   (b) <b> MT-WaveRNN</b>:<br> This is a generator-vocoder pipeline system. The generator with multi-task learning is followed by a WaveRNN neural vocoder.<br>
                   (c) <b> STWaveRNN</b>:<br> This is an integrated architecture that takes linguistic features as input and generates speech waveform as output. As the whole network is shared for both languages, it is called Single-Task WaveRNN or STWaveRNN.<br>
-                  Proposed Systems:
+                  <hr>
+                  <b>Proposed Systems</b>:<br>
+                  <hr>
                   (d) <b> MTWaveRNN</b>:<br> This is an integrated architecture, that takes linguistic features as input andgenerates speech waveform as output directly. Each language-dependent head in the output section has two dense layers.<br>
                   (e) <b> MTWaveRNN+</b>:<br> This is an integrated architecture, that takes linguistic features as input andgenerates speech waveform as output directly. Each language-dependent head in the output section has three dense layers in each language-dependent. We use a ‘+’ sign to indicate there is an extra dense layer.                </p>
           <hr>
-          <p>
+
             <b>en &rarr; cn</b>:<br>
             we are converting an English source utterance to a Mandarin target speaker's voice.<br>
             <b>cn &rarr; en</b>:<br>
@@ -96,20 +100,12 @@
             <hr>
             <b>F</b> : Female Speaker <br>
             <b>M</b> : Male Speaker
-            </p>
-            <hr>
-            <b>Intra-gender Conversion:</b>
-            </p>
 
-
-<!--           <h3><small>Enable a Monolingual Mandarin Speaker to Speak English</small></h3>
-
-                  <h4><small>en &rarr; cn</small></h4> -->
                   <div class="big-screen">
                     <table class="table">
                       <thead>
                         <tr>
-                          <th style="width:200px;"></th>
+                          <th style="width:200px;">Intra-gender</th>
                           <th>cn (F) &rarr; en (F)</th>
                           <th>cn (M) &rarr; en (M)</th>
                           <th>en (F) &rarr; cn (F)</th>
@@ -313,19 +309,13 @@
                           </td>
 
                         </tr>
-                        <hr>
-                        <b>Inter-gender Conversion:</b>
                         </p>
-
-
-            <!--           <h3><small>Enable a Monolingual Mandarin Speaker to Speak English</small></h3>
-
-                              <h4><small>en &rarr; cn</small></h4> -->
                               <div class="big-screen">
                                 <table class="table">
                                   <thead>
                                     <tr>
-                                      <th style="width:200px;"></th>
+
+                                      <th style="width:200px;">Inter-gender</th>
                                       <th>cn (F) &rarr; en (M)</th>
                                       <th>cn (M) &rarr; en (F)</th>
                                       <th>en (F) &rarr; cn (M)</th>
