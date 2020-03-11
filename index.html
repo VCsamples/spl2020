@@ -52,11 +52,11 @@
                           <p>
               <div class="row">
                 <div class="col-md col-sm-12"><a class="text-light"
-                    href="https://www.researchgate.net/profile/Yi_Zhou184">Yi Zhou</a>Student Member, IEEE </div>
+                    href="https://www.researchgate.net/profile/Yi_Zhou184">Yi Zhou, Student Member, IEEE</a> </div>
                 <div class="col-md col-sm-12"><a class="text-light"
-                    href="https://scholar.google.com.sg/citations?user=6gc45QcAAAAJ&hl=en&oi=ao">Xiaohai Tian</a> Member, IEEE </div>
+                    href="https://scholar.google.com.sg/citations?user=6gc45QcAAAAJ&hl=en&oi=ao">Xiaohai Tian, Member, IEEE</a> </div>
                 <div class="col-md col-sm-12"><a class="text-light"
-                    href="https://scholar.google.com/citations?user=z8_x7C8AAAAJ&hl=en">Haizhou Li</a> Fellow, IEEE </div>
+                    href="https://scholar.google.com/citations?user=z8_x7C8AAAAJ&hl=en">Haizhou Li, Fellow, IEEE</a>  </div>
               </div>
             </p>
               <div class="row">
@@ -97,6 +97,10 @@
             <b>F</b> : Female Speaker <br>
             <b>M</b> : Male Speaker
             </p>
+            <hr>
+            <b>Intra-gender Conversion:</b>
+            </p>
+
 
 <!--           <h3><small>Enable a Monolingual Mandarin Speaker to Speak English</small></h3>
 
@@ -105,11 +109,11 @@
                     <table class="table">
                       <thead>
                         <tr>
-                          <th></th>
-                          <th>cn (F) &rarr; en (M)</th>
-                          <th>cn (M) &rarr; en (F)</th>
-                          <th>en (F) &rarr; cn (M)</th>
-                          <th>en (M) &rarr; cn (F)</th>
+                          <th style="width:200px;"></th>
+                          <th>cn (F) &rarr; en (F)</th>
+                          <th>cn (M) &rarr; en (M)</th>
+                          <th>en (F) &rarr; cn (F)</th>
+                          <th>en (M) &rarr; cn (M)</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -309,7 +313,222 @@
                           </td>
 
                         </tr>
+                        <hr>
+                        <b>Inter-gender Conversion:</b>
+                        </p>
 
+
+            <!--           <h3><small>Enable a Monolingual Mandarin Speaker to Speak English</small></h3>
+
+                              <h4><small>en &rarr; cn</small></h4> -->
+                              <div class="big-screen">
+                                <table class="table">
+                                  <thead>
+                                    <tr>
+                                      <th style="width:200px;"></th>
+                                      <th>cn (F) &rarr; en (M)</th>
+                                      <th>cn (M) &rarr; en (F)</th>
+                                      <th>en (F) &rarr; cn (M)</th>
+                                      <th>en (M) &rarr; cn (F)</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">Source    </th>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/source/5.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/source/6.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/source/7.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/source/8.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+
+                                      </tr>
+                                    <tr>
+                                      <th scope="row">Target    </th>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/target/5.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/target/6.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/target/7.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/target/8.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+
+                                      </tr>
+                                    <tr>
+                                      <th scope="row">(a) MT-WORLD</th>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/a/5.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/a/6.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/a/7.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/a/8.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+
+                                      </tr>
+                                    <tr>
+                                      <th scope="colmun">(b) MT-WaveRNN</th>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/b/5.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/b/6.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/b/7.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/b/8.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+
+                                      </tr>
+                                    <tr>
+                                       <th scope="column">(c) STWaveRNN</th>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/c/5.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/c/6.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/c/7.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/c/8.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+
+                                      </tr>
+                                    <tr>
+                                      <th scope="column" nowrap>(d) MTWaveRNN</th>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/d/5.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/d/6.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/d/7.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/d/8.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+
+                                    </tr>
+                                    <tr>
+                                      <th scope="column" nowrap>(e) MTWaveRNN+</th>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/e/5.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/e/6.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/e/7.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+                                      <td>
+                                        <audio controls>
+                                          <source src="./audio/e/8.wav" type="audio/wav" />
+                                          Your browser does not support the audio element.
+                                        </audio>
+                                      </td>
+
+                                    </tr>
                       </tbody>
                     </table>
                   </div>
