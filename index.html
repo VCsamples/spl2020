@@ -47,7 +47,7 @@
         <div class="row align-items-center">
           <div class="col-md-12">
             <h2><a class="text-light">
-               Multi-Task WaveRNN for Cross-lingual Voice Conversion</a></h2>
+               Multi-Task WaveRNN with an Integrated Architecture for Cross-lingual Voice Conversion</a></h2>
             <p>
                           <p>
               <div class="row">
@@ -78,18 +78,17 @@
             the EMIME Mandarin Bilingual Database [<a class="text-success" href="#1">1</a>]:</p>
           <hr>
                 <p>
-                  There are 5 systems implemented for comparison:<br>
+                  There are 4 systems implemented for comparison:<br>
                   <hr>
                   <b>Reference Systems</b>:<br>
                   <hr>
-                  (a) <b> MT-WORLD</b>:<br> This is a generator-vocoder pipeline system. The generator with multi-task learning is followed by a WORLD parametric vocoder.<br>
-                  (b) <b> MT-WaveRNN</b>:<br> This is a generator-vocoder pipeline system. The generator with multi-task learning is followed by a WaveRNN neural vocoder.<br>
+                  (a) <b> P-WORLD</b>:<br> This is a generator-vocoder pipeline system. The generator with multi-task learning is followed by a WORLD parametric vocoder.<br>
+                  (b) <b> P-WaveRNN</b>:<br> This is a generator-vocoder pipeline system. The generator with multi-task learning is followed by a WaveRNN neural vocoder.<br>
                   (c) <b> STWaveRNN</b>:<br> This is an integrated architecture that takes linguistic features as input and generates speech waveform as output. As the whole network is shared for both languages, it is called Single-Task WaveRNN or STWaveRNN.<br>
                   <hr>
                   <b>Proposed Systems</b>:<br>
                   <hr>
-                  (d) <b> MTWaveRNN</b>:<br> This is an integrated architecture, that takes linguistic features as input andgenerates speech waveform as output directly. Each language-dependent head in the output section has two dense layers.<br>
-                  (e) <b> MTWaveRNN+</b>:<br> This is an integrated architecture, that takes linguistic features as input andgenerates speech waveform as output directly. Each language-dependent head in the output section has three dense layers in each language-dependent. We use a ‘+’ sign to indicate there is an extra dense layer.                </p>
+                  (d) <b> MTWaveRNN</b>:<br> This is an integrated architecture, that takes linguistic features as input andgenerates speech waveform as output directly. Each language-dependent head in the output section has two dense layers. This proposed system is called MTWaveRNN<br>               </p>
           <hr>
 
             <b>en &rarr; cn</b>:<br>
@@ -170,7 +169,7 @@
 
                           </tr>
                         <tr>
-                          <th scope="row">(a) MT-WORLD</th>
+                          <th scope="row">(a) P-WORLD</th>
                           <td>
                             <audio controls>
                               <source src="./audio/a/1.wav" type="audio/wav" />
@@ -198,7 +197,7 @@
 
                           </tr>
                         <tr>
-                          <th scope="colmun">(b) MT-WaveRNN</th>
+                          <th scope="colmun">(b) P-WaveRNN</th>
                           <td>
                             <audio controls>
                               <source src="./audio/b/1.wav" type="audio/wav" />
@@ -252,37 +251,9 @@
                             </audio>
                           </td>
 
-                          </tr>
-                        <tr>
-                          <th scope="column" nowrap>(d) MTWaveRNN</th>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/d/1.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/d/2.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/d/3.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-                          <td>
-                            <audio controls>
-                              <source src="./audio/d/4.wav" type="audio/wav" />
-                              Your browser does not support the audio element.
-                            </audio>
-                          </td>
-
                         </tr>
                         <tr>
-                          <th scope="column" nowrap>(e) MTWaveRNN+</th>
+                          <th scope="column" nowrap>(d) MTWaveRNN</th>
                           <td>
                             <audio controls>
                               <source src="./audio/e/1.wav" type="audio/wav" />
@@ -463,36 +434,9 @@
                                       </td>
 
                                       </tr>
+                                
                                     <tr>
                                       <th scope="column" nowrap>(d) MTWaveRNN</th>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/d/5.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/d/6.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/d/7.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-                                      <td>
-                                        <audio controls>
-                                          <source src="./audio/d/8.wav" type="audio/wav" />
-                                          Your browser does not support the audio element.
-                                        </audio>
-                                      </td>
-
-                                    </tr>
-                                    <tr>
-                                      <th scope="column" nowrap>(e) MTWaveRNN+</th>
                                       <td>
                                         <audio controls>
                                           <source src="./audio/e/5.wav" type="audio/wav" />
